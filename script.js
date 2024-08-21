@@ -74,3 +74,12 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+
+///// 2 WAYS OF CREATING A SHADOW COPY OF AN ARRAY:
+//    1. USING EMPTY SLICE METHOD
+// console.log(arr.slice())
+//    2. USING SPREAD OPERATOR
+// console.log([...arr])
