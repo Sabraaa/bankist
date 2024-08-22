@@ -77,7 +77,6 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
-
 ///// 2 WAYS OF CREATING A SHADOW COPY OF AN ARRAY:
 //    1. USING EMPTY SLICE METHOD
 // console.log(arr.slice())
@@ -85,7 +84,6 @@ let arr = ['a', 'b', 'c', 'd', 'e'];
 // console.log([...arr])
 //slice doesn't mutant the array
 
-
 //splice does mutant the array and creates new one
-//second element in splice methos is the number of  
-console.log(arr.splice(2))
+//second element in splice methos is the number of
+console.log(arr.splice(2));
