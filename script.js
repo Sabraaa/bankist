@@ -71,11 +71,23 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// for (const movement of movements ){
+ 
+// }
+
+// movements.forEach(function(movement){
+//   if (movement > 0 ) {
+//     console.log(`you deposited ${movement}`)
+//   } else {
+//     console.log(`you withdrew ${Math.abs(movement)}`)
+//   }
+// })
+
 
 /////////////////////////////////////////////////
 
-let arr = ['a', 'b', 'c', 'd', 'e'];
+// let arr = ['a', 'b', 'c', 'd', 'e'];
 
 ///// 2 WAYS OF CREATING A SHADOW COPY OF AN ARRAY:
 //    1. USING EMPTY SLICE METHOD
@@ -86,4 +98,10 @@ let arr = ['a', 'b', 'c', 'd', 'e'];
 
 //splice does mutant the array and creates new one
 //second element in splice methos is the number of
-console.log(arr.splice(2));
+// console.log(arr.splice(2));
+
+// const arr = [23, 11, 64];
+// console.log(arr.at(0));
+// console.log(arr[arr.length - 1]);
+// console.log(arr.slice(-1)[0])
+// console.log(arr.at(-1))
