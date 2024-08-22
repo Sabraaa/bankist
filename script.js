@@ -71,18 +71,22 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-// for (const movement of movements ){
- 
-// }
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+for (const [i,movement] of movements.entries() ){
+  if (movement > 0 ) {
+    console.log(`you deposited ${i+1}: ${movement}`)
+  } else {
+    break;
+  }
+}
 
-// movements.forEach(function(movement){
-//   if (movement > 0 ) {
-//     console.log(`you deposited ${movement}`)
-//   } else {
-//     console.log(`you withdrew ${Math.abs(movement)}`)
-//   }
-// })
+movements.forEach(function(mov, i, arr){
+  if (mov > 0 ) {
+    console.log(`you deposited ${i}: ${mov} from all ${arr}`)
+  } else {
+    console.log(`you withdrew ${Math.abs(mov)}`)
+  }
+})
 
 
 /////////////////////////////////////////////////
