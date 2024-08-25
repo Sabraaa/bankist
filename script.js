@@ -61,27 +61,46 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const displaymovements = function (movements) {
+  containerMovements.innerHTML = '';
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const html = `
+      <div class="movements__row">
+          <div class="movements__type movements__type--${type}">${
+      i + 1
+    }${type}</div>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value">${mov}</div>
+        </div>
+     `;
+
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+displaymovements(account1.movements);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
 
-currencies.forEach(function (value, key, map) {
-  console.log(`${key}: ${value}`);
-});
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+// });
 
-const currenciesSet = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
-console.log(currenciesSet);
-currenciesSet.forEach(function (value, _, map) {
-  console.log(`${value}: ${value}`);
-});
+// const currenciesSet = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+// console.log(currenciesSet);
+// currenciesSet.forEach(function (value, _, map) {
+//   console.log(`${value}: ${value}`);
+// });
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // for (const [i,movement] of movements.entries() ){
 //   if (movement > 0 ) {
 //     console.log(`you deposited ${i+1}: ${movement}`)
