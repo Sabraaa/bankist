@@ -61,11 +61,11 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displaymovements = function (movements) {
+const displaymovements = movements => {
   containerMovements.innerHTML = '';
-  movements.forEach(function (mov, i) {
+  // movements.forEach(function (mov, i) {
+  movements.map((mov, i) => {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
-
     const html = `
       <div class="movements__row">
           <div class="movements__type movements__type--${type}">${
@@ -75,11 +75,22 @@ const displaymovements = function (movements) {
           <div class="movements__value">${mov}</div>
         </div>
      `;
-
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
 displaymovements(account1.movements);
+
+const createUserName = user => {
+  const userName = user
+    .toLowerCase()
+    .split(' ')
+    .map(word => word[0])
+    .join('');
+  return userName;
+};
+
+console.log(createUserName('Steven Thomas Williams'));
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -137,3 +148,12 @@ displaymovements(account1.movements);
 // console.log(arr[arr.length - 1]);
 // console.log(arr.slice(-1)[0])
 // console.log(arr.at(-1))
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const eurToUsd = 1.1;
+const movementsUsd = movements.map(mov => {
+  return mov * eurToUsd;
+});
+// console.log(movements);
+// console.log(movementsUsd);
